@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>완벽한 파스타를 위한 타이머</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet">
+    <style type="text/css">
+        body{margin: 0;
+            padding: 0;
+            background: url(pasta.jpg) no-repeat center/cover;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        section{height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: auto;
+            justify-content: center;
+        }
+        p{font-family: 'Cormorant Garamond', serif;
+            font-size: 30px;
+            color: white;
+            margin-bottom: 20px;
+        }
+        h1{font-family: 'Rozha One', serif;
+            font-size: 150px;
+            color: white;
+            margin-bottom: 320px;
+            margin-top: 0;
+        }
+        /*#playBut{padding-bottom: 60px;}
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <p>+ Timer for perfect pasta +</p>
+            <h1 id = "tm"></h1>
+            <div id="Music">
+            <div>
+                <img id="playBut"src="play.png">
+                <audio id="musicSnd" src="music.mp3"></audio>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        
+        var time = 600;
+        var min = "10"
+        var sec = "00"
+
+        var x = setInterval(function(){
+            min = parseInt(time/60);
+            sec = time % 60;
+
+            document.getElementById("tm").innerHTML = min + ':' + sec; time--;
+
+            if (time < 0) {
+                clearInterval(x);
+                document.getElementById("tm").innerHTML = "LET'S EAT!"
+            }
+        }, 1000);
+
+        var state = false;
+
+        playBut.onclick = function(){
+            if(!state){
+                playBut.src = "stop.png"
+                musicSnd.play();
+                state = true;
+            }else{
+                playBut.src = "play.png"
+                musicSnd.pause();
+                state = false;
+            }
+        } 
+
+    </script>
+
+
+</body>
+</html>
